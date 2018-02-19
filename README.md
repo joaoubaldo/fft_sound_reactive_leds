@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/joaoubaldo/fft_sound_reactive_leds.svg?branch=master)](https://travis-ci.org/joaoubaldo/fft_sound_reactive_leds)
+
 # Overview
 Sound reactive rgb leds based on FFT processing.
 There are different types of animations:
