@@ -39,8 +39,6 @@ void update() {
   now = millis();
   if (data[SHIFTING_BIN] >= SHIFTING_BIN_VALUE) {
     if (SHIFTING_ENABLED && !animation_is_state(SHIFTING) && ((now - shifting_state.last) > SHIFTING_INTERVAL) ) {
-    // red = 340
-    // purple = 140
       animation_set_state(SHIFTING);
     }
   }
@@ -84,6 +82,10 @@ void sample_data() {
     data_raw[i] = analogRead(MIC_PIN) / 4 - FFT_SAMPLE_COUNT;
     im[i] = 0;
   }
+
+  fix_fft(data_raw, im, 7, 0);
+  
+  filter_fft_bin_data();
 }
 
 void filter_fft_bin_data() {
@@ -121,8 +123,6 @@ void setup() {
 
 void loop() {
   sample_data();
-  fix_fft(data_raw, im, 7, 0);
-  filter_fft_bin_data();
   update();
   refresh_display();
 };

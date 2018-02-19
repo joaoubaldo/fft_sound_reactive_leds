@@ -26,8 +26,8 @@ This animation increases brightness by STEP every INTERVAL when BIN value exceed
 When the threshold (BIN_VALUE) is not met, led brightness is set at BASE_BRIGHTNESS (should be < 200).
 When the threshold is met, the led brightness goes up to 255.
 */
-const bool BEATING_ENABLED = false;
-const uint16_t BEATING_INTERVAL = 333;
+const bool BEATING_ENABLED = true;
+const uint16_t BEATING_INTERVAL = 200;
 const uint16_t BEATING_STEP = 30;
 const uint16_t BEATING_BASE_BRIGHTNESS = 50;
 const int BEATING_BIN = 1;
