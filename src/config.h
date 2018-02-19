@@ -2,6 +2,7 @@
 #define CONFIG_H
 /* Configuration */
 
+/* Debug opens the serial port to print all FFT processing output */
 // #define DEBUG
 
 const int LED_PIN = 12;  // Pin connected to Pololu Led Strip data pin
@@ -27,8 +28,8 @@ When the threshold (BIN_VALUE) is not met, led brightness is set at BASE_BRIGHTN
 When the threshold is met, the led brightness goes up to 255.
 */
 const bool BEATING_ENABLED = true;
-const uint16_t BEATING_INTERVAL = 200;
-const uint16_t BEATING_STEP = 30;
+const uint16_t BEATING_INTERVAL = 500;
+const uint16_t BEATING_STEP = 40;
 const uint16_t BEATING_BASE_BRIGHTNESS = 50;
 const int BEATING_BIN = 1;
 const int BEATING_BIN_VALUE = 5;
